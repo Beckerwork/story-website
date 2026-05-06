@@ -128,8 +128,8 @@
       <div id="plot-regression" style="width:100%;height:480px;"></div>
       <!-- Crosshair coordinate reader — touch-friendly slider -->
       <div style="margin-top:14px;padding:12px 16px;background:#eef6fb;border-radius:8px;border:1px solid #aed4e8;">
-        <div style="font-size:13px;font-weight:bold;color:#1a5276;margin-bottom:10px;">📍 Koordinaten ablesen — Körpergröße: <strong id="ch-x-val">145</strong> cm</div>
-        <input type="range" id="ch-slider" min="105" max="180" value="145" style="width:100%;accent-color:#31708f;">
+        <div style="font-size:13px;font-weight:bold;color:#1a5276;margin-bottom:10px;">📍 Koordinaten ablesen — Körpergröße: <strong id="ch-x-val">25</strong> cm</div>
+        <input type="range" id="ch-slider" min="0" max="180" value="25" style="width:100%;accent-color:#31708f;">
         <div id="ch-readout" style="margin-top:8px;font-size:15px;color:#1a5276;min-height:22px;"></div>
       </div>
       <div style="margin-top:14px;border-top:1px solid #eee;padding-top:14px;">
@@ -203,7 +203,7 @@
     function calcMSE(s,ic){var sum=0;for(var i=0;i<X_KIDS.length;i++){var p=s*X_KIDS[i]+ic;sum+=(Y_KIDS[i]-p)*(Y_KIDS[i]-p);}return sum/X_KIDS.length;}
 
     // Dense x array for line traces (every 1 cm → hoverable/clickable at each integer)
-    var xDense=[];for(var x=105;x<=180;x++)xDense.push(x);
+    var xDense=[];for(var x=-10;x<=180;x++)xDense.push(x);
 
     var plotCfg={displayModeBar:false,scrollZoom:false,staticPlot:false};
 
@@ -253,7 +253,7 @@
       plot_bgcolor:'white',paper_bgcolor:'white',
       dragmode:false,
       hovermode:'closest',
-      shapes:[{type:'line',x0:145,x1:145,y0:-35,y1:36,line:{color:'#a94442',width:2,dash:'dot'}}]
+      shapes:[{type:'line',x0:25,x1:25,y0:-35,y1:36,line:{color:'#a94442',width:2,dash:'dot'}}]
     },plotCfg);
 
     // ── Crosshair (touch-friendly coordinate reader) ──
