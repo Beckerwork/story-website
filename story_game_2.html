@@ -319,7 +319,7 @@
       var v=parseFloat(raw);
       if(isNaN(v)){fb.style.color='#a94442';fb.textContent='⚠️ Bitte eine Zahl eingeben (z. B. 10,50).';hint.textContent='';nav.style.display='none';return;}
       if(Math.abs(v-22.11)<=1.0){
-        fb.style.color='#3c763d';fb.textContent='✅ Richtig! Die Roboter schätzen Sarahs Geschwindigkeit auf ca. 22,11 km/h.';
+        fb.style.color='#3c763d';fb.textContent='✅ Richtig! Die Roboter schätzen Sarahs Geschwindigkeit auf etwas mehr als 22 km/h.';
         hint.style.color='#31708f';hint.textContent='Dein Wert liegt nah genug an der Vorhersage der Roboter.';nav.style.display='block';
       }else{
         fb.style.color='#a94442';fb.textContent='❌ Nicht ganz. Schau nochmal genau auf die Gerade bei einer Körpergröße von 145 cm.';hint.textContent='';nav.style.display='none';
